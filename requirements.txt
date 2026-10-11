@@ -1,0 +1,4 @@
+# 游戏运行所需依赖（打包/分发用）
+# 开发用依赖（pillow/requests/playwright/pytest）不在运行列表中，
+# 详见 requirements-dev.txt
+pygame-ce==2.5.8

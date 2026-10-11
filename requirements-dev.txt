@@ -1,0 +1,6 @@
+# 开发/打包完整依赖
+-r requirements.txt
+pillow==12.3.0
+requests==2.34.2
+playwright==1.63.0
+pytest==9.1.1

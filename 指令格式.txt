@@ -1,0 +1,113 @@
+================================================
+土豆尖塔（Potatospire）调试控制台 指令格式
+================================================
+
+呼出方式：按 ` 键（反引号，ESC 下方）打开控制台，
+输入指令后按回车执行，再按 ` 或 ESC 关闭。
+
+------------------------------------------------
+【查看类】
+------------------------------------------------
+help                显示帮助（指向本文件）
+statuses            列出全部可用状态（key + 名称）
+cards               列出全部可用卡牌（key + 名称）
+state               打印当前战斗状态（回合 / 双方血量 / 格挡 / 状态）
+
+------------------------------------------------
+【状态类】给指定目标施加 / 调整状态
+------------------------------------------------
+status <目标> <状态> <层数>
+
+  目标：self（自己） / enemy（敌方）
+  状态：任意已登记状态 key（可用 statuses 查看全部），常用如下：
+
+    mark          标记
+    investigate   调查
+    bleed         流血
+    burn          灼烧
+    poison        中毒
+    resilience    韧性
+    counterattack 反击
+    hide          隐匿
+    vulnerable    易伤
+    frozen        冰冻
+    territorial   领地意识
+    shrink        缩小
+    artifact      人工制品
+    slow          缓慢
+    slippery      滑溜
+    serum         血清
+
+  例：
+    status enemy poison 3     给敌方施加 3 层中毒
+    status self bleed 2       给自己施加 2 层流血
+    status self resilience 3  给自己施加 3 层韧性
+    status enemy serum 1      给敌方施加 1 层血清
+
+------------------------------------------------
+【数值类】直接修改生命 / 格挡
+------------------------------------------------
+hp <目标> <值>       设置目标生命值（0 ~ 上限）
+block <目标> <值>    设置目标格挡值
+
+  例：
+    hp enemy 40        敌方生命设为 40
+    hp self 50         自己生命设为 50
+    block self 10      自己格挡设为 10
+    block enemy 0      敌方格挡清空
+
+------------------------------------------------
+【卡牌类】
+------------------------------------------------
+draw <n>            抽 n 张牌到手牌
+give <卡牌key>      将一张指定卡牌加入手牌
+
+  卡牌 key：任意已登记卡牌 key（可用 cards 查看全部），常用如下：
+
+    strike           打击
+    defend           防御
+    burst            爆发
+    toughness        韧性
+    mark_card        标记
+    guard            加护
+    drink            喝水
+    slim             减肥
+    draw             抽牌
+    num_strike       数值打击
+    store_power      蓄势
+    priority         轻重缓急
+    pangu            盘古开天
+    iron_wall        铁壁
+    inverted_pyramid 倒金字塔
+    correct_mistake  纠正错误
+    science_correction 科学勘误
+    hamburger        汉堡
+    heavy_strike     重击
+    guilt            愧疚（诅咒）
+    poison_enchant   淬毒
+    poison_burst     毒发
+    hide_card        隐匿
+    lurk             潜伏
+    mark_strike      标记打击
+    weakness_survey  弱点调查
+    poison_takeout   毒外卖
+    body_slam        全身撞击
+    unshakable       岿然不动
+    bear_revenge     熊孩子的报复
+
+  例：
+    draw 3
+    give strike
+
+------------------------------------------------
+【战斗类】
+------------------------------------------------
+endturn    立即结束当前回合（等同点击「跳过回合」）
+win        直接触发胜利结算画面
+lose       直接触发失败结算画面
+
+------------------------------------------------
+【地图类】（仅肉鸽地图场景有效）
+------------------------------------------------
+unlock all     揭示地图上所有房间类型（解除迷雾）
+reset fog      重置迷雾（仅起点可见）

@@ -1,0 +1,39 @@
+# 虚拟环境
+.venv/
+venv/
+env/
+
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 打包产物
+build/
+dist/
+*.spec.bak
+
+# 运行/调试留下的东西
+*.log
+
+# 爬虫缓存（可选，素材图片较大）
+sourcecache/starengine/
+sourcecache/sts2/
+
+# 游戏素材：**不进公开仓库**
+# （sources/ 里的卡面 / 立绘 / 敌人图是从游戏 wiki 爬的，版权归厂商所有，
+#   不能公开分发；仓库里只留一份说明，见 sources/README.md）
+sources/*
+!sources/README.md
+
+# IDE
+.idea/
+.vscode/
