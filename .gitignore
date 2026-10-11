@@ -27,6 +27,8 @@ dist/
 # 爬虫缓存（可选，素材图片较大）
 sourcecache/starengine/
 sourcecache/sts2/
+# 爬虫目录下的对比图也是游戏原画，别公开（本地文件保留，只是不进仓库）
+sourcecache/*.png
 
 # 游戏素材：**不进公开仓库**
 # （sources/ 里的卡面 / 立绘 / 敌人图是从游戏 wiki 爬的，版权归厂商所有，
